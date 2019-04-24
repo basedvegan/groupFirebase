@@ -21,6 +21,8 @@ var monthlyRate = "";
 
 // on click even for the submit button
 
+$("#search-button").on("click", function () {
+
 var employeeName = $("#employeeName").val();
 var role = $("#role").val();
 var startDate = $("#startDate").val();
@@ -28,8 +30,16 @@ var monthlyRate = $("#monthlyRate").val();
 
 // create function for months worked (current date - start date)
 
+var months = 12;
+
 // create function for total billed (months * monthly rate)
+
+var totalBilled = months * monthlyRate;
+
+});
 
 // then function respond
 
 // create table row
+
+$("table").append("<tr><td>" + employeeName + "</td><td>" + role + "</td><td>" + startDate + "</td><td>" + months + "</td><td>" + monthlyRate + "</td><td>" + totalBilled + "</td></tr>");
